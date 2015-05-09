@@ -1,5 +1,5 @@
 <?php
-	$categories = $this->getcategories;
+	$categories = $this->subcategories;
 	if (!isset($_GET['startrow']) or !is_numeric($_GET['startrow'])) {
 	$startrow = 0;
   	$category = array_slice($categories, 0, 4);
@@ -17,13 +17,12 @@
 <div class="prod"<?php echo $i % 2; ?>>
 	<?php // Set up the images
 	$image = 'public/images/'. $item['cat_image']; 
-	//echo $image;
-		if (!is_file($image)) {
-			$image = 'public/images/nophoto.jpg';
-			//echo "file not exists";exit;
+	
+	if (!is_file($image)) {
+			$image = "public/images/nophoto.jpg";
 		}
 	?>
-	<div class="prodimg"><a href="#"><img alt="" src="<?php echo $image; ?>" border="0" height="100" width="119" /></a></div>
+	<div class="prodimg"><a href="#"><img alt="" src="<?php echo '../'.$image; ?>" border="0" height="100" width="119" /></a></div>
 	<div class="txt">
 	<h2><?php echo htmlspecialchars($item['cat_name']); ?></h2><br />
 	<p><a href="#" class="info"><?php echo htmlspecialchars($item['cat_description']); ?></a></p>

@@ -33,7 +33,7 @@
 	<li class="new"><a href="<?php echo URL;?>help">Help</a></li>
 	<li class="line"></li>
 	</ul>
-	<img src="public/images/Thailand-Shop-Online-Banner-2.gif" width="764" height="260" alt="Banner" /></div>
+	<img src="<?php echo URL;?>public/images/Thailand-Shop-Online-Banner-2.gif" width="764" height="260" alt="Banner" /></div>
 </div>
 
 <div id="content">
@@ -41,16 +41,18 @@
 <div id="categories">
 <h2></h2>
 <ul>
-<br /><li><a href="#">IT Devices</a></li><br />
-<br /><li><a href="#">Fashion</a></li><br />
-<br /><li><a href="#">Health</a></li><br />
-<br /><li><a href="#">Sports</a></li><br />
-<br /><li><a href="#">Services</a></li><br />
-<br /><li><a href="#">Books</a></li><br />
-<br /><li><a href="#">Media</a></li><br />
-<br /><li><a href="#">Event Supplies</a></li><br />
-<br /><li><a href="#">Others</a></li><br />
+<?php 
+echo '<br /><li><a href="'.URL.'index/sub?type='. "IT Devices".'">IT Devices</a></li><br />';
+echo '<br /><li><a href="'.URL.'index/sub?type='. "Music".'">Music</a></li><br />';
+echo '<br /><li><a href="'.URL.'index/sub?type='. "Learning".'">Learning</a></li><br />';
+echo '<br /><li><a href="'.URL.'index/sub?type='. "Fashion".'">Fashion</a></li><br />';
+echo '<br /><li><a href="'.URL.'index/sub?type='. "Sports".'">Sports</a></li><br />';
+echo '<br /><li><a href="#">Services</a></li><br />';
+echo '<br /><li><a href="#">Books</a></li><br />';
+echo '<br /><li><a href="#">Event Supplies</a></li><br />';
+echo '<br /><li><a href="#">Others</a></li><br />';
 
+?>
 </ul>
 </div>
 </div>

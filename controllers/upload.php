@@ -28,7 +28,7 @@ class Upload extends Controller {
 	
 		$TARGET_PATH .= $image['name'];
 	
-		if ( $cat_name == "" || $cat_description == "" || $image['name'] == "" )
+		if ( $cat_name == "" || $cat_type == "" || $cat_prize == "" || $cat_description == "" || $image['name'] == "" )
 		{
 			$_SESSION['error'] = "All fields are required";
 			header('location: ' . URL . 'upload');

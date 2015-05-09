@@ -4,13 +4,21 @@ class Index extends Controller {
 	
 	function __construct(){
 		parent::__construct();
+		//Session::init();
+		//$logged = Session::get('loggedIn');
+		//if ($logged == false){
+		//	Session::destroy();
+		//	header('location: ../index');
+		//	header('location: ' . URL . 'index');
+		//	exit;
+		//}
+		//print_r($_SESSION);
+
 		require 'models/category_model.php';
 		$this->model = new Category_Model();
 	}
 	function index(){
 		//echo "INDEX INDEX INDEX";
-		
-		$this->view->test = $this->model->test();
 		
 		$this->view->getcategories = $this->model->getCategories();
 		
@@ -19,23 +27,38 @@ class Index extends Controller {
 		$this->view->render('index/index');
 		
 	}
+	public function edit($id = Null)
+	{
+		$id = $_GET['id'];	
+		$this->view->edit = $this->model->edit($id);
+		$this->view->render('index/edit');
+	}
+	
 	public function delete($id)
 	{
 		$this->model->delete($id);
 		header('location: ' . URL . 'index');
 	}
 	
-	public function edit()
+	function imgUpdate()
 	{
-	//	$this->view->user = $this->model->userSingleList($id);
-	//	$this->model->edit($id);
-//echo 'edit';
-		//$this->view->render('index/edit');
-		header('location: ' . URL . 'edit');
-	}
+		$id = $_POST['id'];
+	//echo $id;exit;
+		$data['cat_name'] = $_POST['cat_name'];
+		$data['cat_type'] = $_POST['cat_type'];
+		$data['cat_prize'] = $_POST['cat_prize'];
+		$data['cat_description'] = $_POST['cat_description'];
 	
-	function detail(){
-		echo 'detail';
-		$this->view->render('index/index');
+		$this->model->imgUpdate($data, $id);
+		header('location: ' . URL . 'index');
+		
+	}
+	function sub($type = Null){
+	//	echo "sub";
+		$type = $_GET['type'];
+	//	echo $type;exit;
+		$this->view->subcategories = $this->model->subCategories($type);
+		$this->view->render('index/sub');
+	
 	}
 }
