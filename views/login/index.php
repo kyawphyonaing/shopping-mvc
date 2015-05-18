@@ -14,7 +14,7 @@
            		<div id="login" class="animate form">
             		<form method="post" action="login/run">
    
-						<h1>Log in</h1> 
+						<h4>Log in</h4> 
 						
                         <p>	<label for="username" class="uname" data-icon="u" > Your username </label>
 							<input id="username" name="login" required type="text" placeholder="myusername"/>
@@ -32,7 +32,7 @@
 				</div>
 				<div id="register" class="animate form">
                 	<form method="post" action="login/signup">
-                		<h1> Sign up </h1> 
+                		<h4> Sign up </h4> 
                         <p>	<label for="usernamesignup" class="uname" data-icon="u">Your username</label>
                             <input id="usernamesignup" name="name" required type="text" placeholder="mysuperusername690" />
                         </p>

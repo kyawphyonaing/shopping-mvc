@@ -23,7 +23,9 @@
 	<li class="currency_headline">Currencies</li>
 	<li class="listmenu">
 	<form action="" method="get">
-	<select name="currency"><option>US Dollar</option><option>Japan Yen</option></select>
+	<select name="currency">
+	<option>US Dollar</option>
+	<option>Japan Yen</option></select>
 	</form>
 	</li>
 	</ul>
@@ -32,9 +34,13 @@
 	<li class="line"></li>
 	<li class="new"><a href="<?php echo URL;?>help">Help</a></li>
 	<li class="line"></li>
+	<li class="specials"><a href="<?php echo URL;?>specials">Specials</a></li>
+	<li class="line"></li>
+	<li class="contact"><a href="<?php echo URL;?>index/email">Contact</a></li>
 	</ul>
-	<img src="<?php echo URL;?>public/images/Thailand-Shop-Online-Banner-2.gif" width="764" height="260" alt="Banner" /></div>
+	<img src="<?php echo URL;?>public/images/Thailand-Shop-Online-Banner-2.gif" width="764" height="260" alt="Banner" />
 </div>
+
 
 <div id="content">
 <div id="leftPan">
@@ -47,10 +53,14 @@ echo '<br /><li><a href="'.URL.'index/sub?type='. "Music".'">Music</a></li><br /
 echo '<br /><li><a href="'.URL.'index/sub?type='. "Learning".'">Learning</a></li><br />';
 echo '<br /><li><a href="'.URL.'index/sub?type='. "Fashion".'">Fashion</a></li><br />';
 echo '<br /><li><a href="'.URL.'index/sub?type='. "Sports".'">Sports</a></li><br />';
-echo '<br /><li><a href="#">Services</a></li><br />';
-echo '<br /><li><a href="#">Books</a></li><br />';
-echo '<br /><li><a href="#">Event Supplies</a></li><br />';
 echo '<br /><li><a href="#">Others</a></li><br />';
+echo '<br /><li></li><br />';
+echo '<br /><li></li><br />';
+echo '<br /><li></li><br />';
+echo '<br /><li></li><br />';
+echo '<br /><li></li><br />';
+echo '<br /><li></li><br />';
+echo '<br /><li></li><br />';
 
 ?>
 </ul>

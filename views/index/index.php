@@ -28,7 +28,7 @@
 	<h2><?php echo htmlspecialchars($item['cat_name']); ?></h2><br />
 	<p><a href="#" class="info"><?php echo htmlspecialchars($item['cat_description']); ?></a></p>
 	</div>
-	<div class="price"><?php echo htmlspecialchars($item['cat_prize']); ?></div>
+	<div class="price">¥<?php echo htmlspecialchars($item['cat_prize']); ?></div>
 	<div class="action"><br />
 	<?php
 	if(Session::get('loggedIn') == true){

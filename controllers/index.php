@@ -59,6 +59,31 @@ class Index extends Controller {
 	//	echo $type;exit;
 		$this->view->subcategories = $this->model->subCategories($type);
 		$this->view->render('index/sub');
-	
+	}
+	function email(){
+		$this->view->render('index/email');	
+	}
+	function send_mail(){
+		$webmaster_email = "kokyawphyonaing@gmail.com";
+
+
+		$email_address = $_POST['email_address'] ;
+		$comments = $_POST['comments'] ;
+
+		//echo $email_address .  $comments;exit;
+		if (!isset($_POST['email_address'])) {
+			header('location: ' . URL . 'index/email');
+		}
+
+		elseif (empty($email_address) || empty($comments)) {
+			header('location: ' . URL . 'error/index');
+		}
+		else {
+	//	mail( "$webmaster_email", "Feedback Form Results",
+ 	//	$comments, "From: $email_address" );
+ 	mail('kokyawphyonaing@gmail.com', 'my sub', $comments);
+		//echo "sucess";exit;
+		header('location: ' . URL . 'index');
+		}
 	}
 }
