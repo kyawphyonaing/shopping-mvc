@@ -72,13 +72,14 @@ class Index extends Controller {
 		if (!isset($_POST['email_address'])) {
 			header('location: ' . URL . 'index/email');
 		}
-
 		elseif (empty($email_address) || empty($comments)) {
 			header('location: ' . URL . 'error/index');
 		}
 		else {
+		//feedback
 		mail( "$webmaster_email", "Feedback Form Results",
  		$comments, "From: $email_address" );
+		//thanking
 		mail("$email_address", "Thanking for your contact",
 		"I will be waiting for email forever.", "From: webmaster");
 		header('location: ' . URL . 'index');

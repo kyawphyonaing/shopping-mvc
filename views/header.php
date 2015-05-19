@@ -32,9 +32,9 @@
 	<ul class="menu">
 	<li class="home"><a href="<?php echo URL;?>index">Index</a></li>
 	<li class="line"></li>
-	<li class="new"><a href="<?php echo URL;?>help">Help</a></li>
+	<li class="new"><a href="<?php echo URL;?>newproduct">Newproduct</a></li>
 	<li class="line"></li>
-	<li class="specials"><a href="<?php echo URL;?>specials">Specials</a></li>
+	<li class="specials"><a href="<?php echo URL;?>newproduct/special">Specials</a></li>
 	<li class="line"></li>
 	<li class="contact"><a href="<?php echo URL;?>index/email">Contact</a></li>
 	</ul>
