@@ -79,9 +79,9 @@ class Index extends Controller {
 			header('location: ' . URL . 'error/index');
 		}
 		else {
-	//	mail( "$webmaster_email", "Feedback Form Results",
- 	//	$comments, "From: $email_address" );
- 	mail('kokyawphyonaing@gmail.com', 'my sub', $comments);
+		mail( "$webmaster_email", "Feedback Form Results",
+ 		$comments, "From: $email_address" );
+ 	//  mail('kokyawphyonaing@gmail.com', 'my sub', $comments);
 		//echo "sucess";exit;
 		header('location: ' . URL . 'index');
 		}
